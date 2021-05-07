@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp/src/widgets/home_headerinfo.dart';
 import 'package:foodapp/src/widgets/recipe_category.dart';
+import 'package:foodapp/src/widgets/search_field.dart';
+import 'package:foodapp/src/widgets/food_list.dart';
 
 
 
@@ -21,6 +23,31 @@ class _HomeScreenState extends State<HomeScreen> {
         children: <Widget>[
           HomeTopInfo(),
           RecipeCategory(),
+          SizedBox(height: 20.0,),
+          SearchField(),
+          SizedBox(height: 20.0,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text("Frequently Made Foods",
+              style: TextStyle(
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold,
+          )),
+              GestureDetector(
+                onTap: (){},
+              child: Text("See All",
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.greenAccent
+                )),
+              ),
+            ],
+          ),
+          Container(
+            child: FoodList(),
+          )
         ],
       ),
     );

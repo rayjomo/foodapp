@@ -9,7 +9,7 @@ import 'package:foodapp/src/models/categories_model.dart';
 
 class RecipeCategory extends StatelessWidget{
 
-  final List<Category> _categories = categoryitems;
+  List<Category> _categories = categories;
 
   @override
   Widget build(BuildContext context){
